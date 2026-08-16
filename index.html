@@ -104,6 +104,31 @@ footer{background:var(--dark);color:white;text-align:center;padding:26px 6%;font
 footer strong{font-family:'Playfair Display';font-size:18px;display:block}
 footer span{opacity:.7}
 
+
+/* ===== Tampilan Hasil Pekerjaan ===== */
+.work-intro{max-width:760px;margin:-22px auto 35px;text-align:center;color:#816b73;font-size:14px}
+.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.work-card{overflow:hidden;padding:0;transition:.25s}
+.work-card:hover{transform:translateY(-5px);box-shadow:0 20px 45px rgba(105,27,57,.12)}
+.work-preview{background:linear-gradient(145deg,#fff7fa,#fff);padding:18px 18px 12px;border-bottom:1px solid var(--line);min-height:220px}
+.work-label{display:inline-block;background:var(--pink);color:#fff;font-size:11px;font-weight:800;padding:5px 10px;border-radius:8px;margin-bottom:10px}
+.mock-title{text-align:center;font-size:12px;font-weight:800;color:var(--dark);margin-bottom:10px}
+.mock-sub{text-align:center;font-size:9px;color:#8b737c;margin-top:-6px;margin-bottom:10px}
+.mock-table{width:100%;border-collapse:collapse;font-size:9px;background:#fff}
+.mock-table th,.mock-table td{border:1px solid #e9cbd6;padding:5px 4px;text-align:center}
+.mock-table th{background:#ffe7ef;color:var(--dark);font-weight:800}
+.mock-total{display:flex;gap:7px;margin-top:9px}
+.mock-total div{flex:1;background:#fff;border:1px solid #edc7d5;border-radius:7px;padding:6px;text-align:center;font-size:8px;color:#7a626b}
+.mock-total strong{display:block;color:var(--dark);font-size:11px}
+.mock-note{background:#fff;border:1px solid #edc7d5;border-radius:8px;padding:10px;font-size:9px;color:#705c65;line-height:1.5}
+.mock-note b{color:var(--pink)}
+.work-info{padding:18px 20px 21px}
+.work-info h3{color:var(--dark);font-size:18px;margin-bottom:6px}
+.work-info p{font-size:13px;color:#816b73}
+.work-icon{width:42px;height:42px;border-radius:12px;background:#ffe7ef;color:var(--pink);display:grid;place-items:center;font-weight:800;font-size:17px;float:left;margin-right:12px;margin-bottom:25px}
+.work-info::after{content:'';display:block;clear:both}
+@media(max-width:850px){.work-grid{grid-template-columns:1fr}}
+
 @media(max-width:850px){
  .nav{padding:0 5%} .menu{display:block} .navlinks{display:none;position:absolute;left:0;right:0;top:78px;background:white;flex-direction:column;text-align:center;padding:20px;box-shadow:0 10px 25px rgba(0,0,0,.08)} .navlinks.open{display:flex}
  .hero{padding:45px 6% 30px} .hero-grid{grid-template-columns:1fr;gap:15px} .photo-side{height:390px;order:0} .photo-bg{width:310px;height:340px} .photo{width:245px;height:370px} .content{padding:0;text-align:center} .lead{margin-left:auto;margin-right:auto} .buttons{justify-content:center}
@@ -123,6 +148,21 @@ footer span{opacity:.7}
   <nav class="navlinks">
     <a href="#home">Beranda</a><a href="#tentang">Tentang</a><a href="#pengalaman">Pengalaman</a>
     <a href="#keahlian">Keahlian</a><a href="#pendidikan">Pendidikan</a><a href="#portfolio">Portofolio</a><a href="#kontak">Kontak</a>
+<div class="final-contact-buttons" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px;">
+  <a href="CV-Magfiratul-Jannah.pdf" download
+     style="display:inline-block;padding:13px 22px;border-radius:10px;background:#e95b91;color:white;text-decoration:none;font-weight:700;">
+    📄 Download CV
+  </a>
+  <a href="https://wa.me/6282138226402" target="_blank" rel="noopener"
+     style="display:inline-block;padding:13px 22px;border-radius:10px;background:#fff;color:#e95b91;border:2px solid #e95b91;text-decoration:none;font-weight:700;">
+    💬 WhatsApp
+  </a>
+  <a href="#" target="_blank" rel="noopener"
+     style="display:inline-block;padding:13px 22px;border-radius:10px;background:#fff;color:#e95b91;border:2px solid #e95b91;text-decoration:none;font-weight:700;">
+    in LinkedIn
+  </a>
+</div>
+
   </nav>
 </header>
 
@@ -199,12 +239,73 @@ footer span{opacity:.7}
 </section>
 
 <section class="section" id="portfolio">
-  <div class="section-title"><small>Karya</small><h2>Contoh Portofolio</h2></div>
-  <div class="projects">
-    <article class="card project"><div class="project-icon">▥</div><h3>Rekap Penjualan</h3><p>Pengolahan dan rekap data penjualan toko secara berkala.</p></article>
-    <article class="card project"><div class="project-icon">▤</div><h3>Laporan Stok</h3><p>Pencatatan barang tersedia dan barang yang habis.</p></article>
-    <article class="card project"><div class="project-icon">Rp</div><h3>Rekap Penghasilan</h3><p>Rekap penghasilan toko setiap bulan.</p></article>
-    <article class="card project"><div class="project-icon">✓</div><h3>Administrasi Kantor</h3><p>Notulen, dokumentasi, kwitansi, SPPD dan laporan pengeluaran operasional.</p></article>
+  <div class="section-title"><small>Hasil Pekerjaan</small><h2>Contoh Hasil Pekerjaan</h2></div>
+  <p class="work-intro">Berikut adalah contoh pekerjaan yang pernah saya lakukan di bidang administrasi, keuangan, pengolahan data, dan administrasi perkantoran. Data pada contoh ini merupakan data simulasi untuk kebutuhan portofolio.</p>
+  <div class="work-grid">
+
+    <article class="card work-card">
+      <div class="work-preview">
+        <span class="work-label">01</span>
+        <div class="mock-title">REKAP PENJUALAN & PENDAPATAN</div>
+        <div class="mock-sub">TOKO OLYPOP-AII · CONTOH DATA</div>
+        <table class="mock-table"><tr><th>Produk</th><th>Terjual</th><th>Total</th></tr><tr><td>Produk A</td><td>320</td><td>Rp3.200.000</td></tr><tr><td>Produk B</td><td>250</td><td>Rp2.500.000</td></tr><tr><td>Produk C</td><td>180</td><td>Rp1.800.000</td></tr></table>
+        <div class="mock-total"><div>Total Transaksi<strong>750</strong></div><div>Total Pendapatan<strong>Rp7,5 Jt</strong></div></div>
+      </div>
+      <div class="work-info"><div class="work-icon">↗</div><h3>Rekap Penjualan & Pendapatan</h3><p>Membuat rekap penjualan secara berkala untuk memantau pendapatan, jumlah transaksi, dan produk yang terjual.</p></div>
+    </article>
+
+    <article class="card work-card">
+      <div class="work-preview">
+        <span class="work-label">02</span>
+        <div class="mock-title">LAPORAN STOK BARANG</div>
+        <div class="mock-sub">TOKO OLYPOP-AII · CONTOH DATA</div>
+        <table class="mock-table"><tr><th>Produk</th><th>Stok Awal</th><th>Masuk</th><th>Keluar</th><th>Stok Akhir</th></tr><tr><td>Produk A</td><td>150</td><td>200</td><td>320</td><td>30</td></tr><tr><td>Produk B</td><td>100</td><td>150</td><td>250</td><td>0</td></tr><tr><td>Produk C</td><td>120</td><td>150</td><td>270</td><td>0</td></tr></table>
+        <div class="mock-note"><b>Keterangan:</b> Stok 0 = perlu segera diadakan · Stok rendah = perlu dipantau.</div>
+      </div>
+      <div class="work-info"><div class="work-icon">□</div><h3>Laporan Stok Barang</h3><p>Mencatat dan memantau stok barang yang tersedia, habis, masuk, dan keluar agar data persediaan tetap rapi.</p></div>
+    </article>
+
+    <article class="card work-card">
+      <div class="work-preview">
+        <span class="work-label">03</span>
+        <div class="mock-title">LAPORAN PERJALANAN DINAS (SPPD)</div>
+        <div class="mock-sub">BADAN PENGHUBUNG SULAWESI BARAT · SIMULASI</div>
+        <table class="mock-table"><tr><th>Tanggal</th><th>Tujuan</th><th>Kegiatan</th><th>Biaya</th></tr><tr><td>05/04</td><td>Mamuju</td><td>Koordinasi</td><td>Rp350.000</td></tr><tr><td>12/04</td><td>Majene</td><td>Rapat</td><td>Rp300.000</td></tr><tr><td>20/04</td><td>Polewali</td><td>Kegiatan</td><td>Rp400.000</td></tr></table>
+      </div>
+      <div class="work-info"><div class="work-icon">✈</div><h3>Administrasi SPPD</h3><p>Menyusun laporan perjalanan dinas dalam daerah maupun luar daerah secara rapi dan terstruktur.</p></div>
+    </article>
+
+    <article class="card work-card">
+      <div class="work-preview">
+        <span class="work-label">04</span>
+        <div class="mock-title">NOTULEN RAPAT</div>
+        <div class="mock-sub">BADAN PENGHUBUNG SULAWESI BARAT · SIMULASI</div>
+        <div class="mock-note"><b>Hari/Tanggal:</b> Senin, 15 April 2024<br><b>Waktu:</b> 09.00–11.30 WITA<br><b>Agenda:</b> Evaluasi kegiatan dan persiapan kegiatan berikutnya.<br><br><b>Hasil Rapat:</b><br>1. Evaluasi kegiatan sebelumnya.<br>2. Pembahasan kendala dan solusi.<br>3. Penyusunan rencana kegiatan.</div>
+      </div>
+      <div class="work-info"><div class="work-icon">▤</div><h3>Notulen & Dokumentasi Rapat</h3><p>Membuat notulen rapat dan mendukung dokumentasi kegiatan untuk kebutuhan administrasi kantor.</p></div>
+    </article>
+
+    <article class="card work-card">
+      <div class="work-preview">
+        <span class="work-label">05</span>
+        <div class="mock-title">REKAP PENGELUARAN KANTOR</div>
+        <div class="mock-sub">CONTOH DATA OPERASIONAL</div>
+        <table class="mock-table"><tr><th>Uraian</th><th>Kategori</th><th>Jumlah</th></tr><tr><td>BBM</td><td>Transportasi</td><td>Rp350.000</td></tr><tr><td>Tol</td><td>Transportasi</td><td>Rp150.000</td></tr><tr><td>Makan & Minum Rapat</td><td>Konsumsi</td><td>Rp250.000</td></tr><tr><td>Galon & Gas</td><td>Persediaan</td><td>Rp75.000</td></tr></table>
+        <div class="mock-total"><div>Total Pengeluaran<strong>Rp825.000</strong></div></div>
+      </div>
+      <div class="work-info"><div class="work-icon">Rp</div><h3>Laporan Pengeluaran Kantor</h3><p>Merekap pengeluaran BBM, tol, konsumsi rapat, galon, gas, dan kebutuhan operasional kantor.</p></div>
+    </article>
+
+    <article class="card work-card">
+      <div class="work-preview">
+        <span class="work-label">06</span>
+        <div class="mock-title">KWITANSI PENGELUARAN</div>
+        <div class="mock-sub">CONTOH FORMAT · BUKAN DOKUMEN ASLI</div>
+        <div class="mock-note"><b>Telah terima dari:</b> Instansi/Unit Kerja<br><b>Untuk pembayaran:</b> Makan dan Minum Rapat<br><b>Jumlah:</b> Dua ratus lima puluh ribu rupiah<br><b>Tanggal:</b> 08 April 2024<br><br><span style="display:flex;justify-content:space-between"><span>Yang menerima</span><span>Mengetahui</span></span></div>
+      </div>
+      <div class="work-info"><div class="work-icon">▣</div><h3>Kwitansi Pengeluaran</h3><p>Membuat dan mengarsipkan kwitansi pengeluaran untuk kebutuhan administrasi dan konsumsi rapat.</p></div>
+    </article>
+
   </div>
 </section>
 
@@ -217,5 +318,13 @@ footer span{opacity:.7}
 </main>
 
 <footer><strong>Magfiratul Jannah</strong><span>Portofolio Administrasi & Analisis Data · © 2026</span></footer>
+
+<!--
+PENTING:
+1. Simpan file CV dengan nama: CV-Magfiratul-Jannah.pdf di folder yang sama dengan index.html.
+2. Ganti nomor WhatsApp 6281234567890 dengan nomor WhatsApp kamu.
+3. Ganti # dengan URL profil LinkedIn kamu.
+-->
+
 </body>
 </html>
